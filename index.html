@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PPDB SMK Bina Informatika</title>
+  <style>
+    /* Reset and base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+  scroll-behavior: smooth;
+}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f4f6f8;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Running text container */
+    .running-text-container {
+      background-color: #00529b;
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    }
+
+    .running-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 40px;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Navbar styles */
+    nav {
+      background-color: #007acc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 10px;
+      display: block;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background-color: #005a9e;
+      border-radius: 4px;
+      color: #fff;
+      outline: none;
+    }
+
+    /* Main content */
+    .hero {
+      background: url('bifor.jpg');
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      max-width: 700px;
+      font-weight: 700;
+    }
+
+    /* Section styles */
+    section {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #007acc;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      background-color: #007acc;
+      color: white;
+      margin-top: auto;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 8px 0;
+      }
+
+      .hero {
+        height: 250px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="running-text-container" aria-label="Informasi penting bergulir">
+    <div class="running-text" role="marquee" aria-live="polite" aria-atomic="true">
+      Penerimaan Siswa Baru Tahun Ajaran 2025/2026 - Daftar Sekarang untuk Masa Depan Cemerlang!
+    </div>
+  </div>
+
+  <nav role="navigation" aria-label="Menu utama">
+    <ul>
+      <li><a href="#home" tabindex="0">Beranda</a></li>
+      <li><a href="#about" tabindex="0">Tentang</a></li>
+      <li><a href="#programs" tabindex="0">Program</a></li>
+      <li><a href="#admission" tabindex="0">Pendaftaran</a></li>
+      <li><a href="#contact" tabindex="0">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home" role="banner">
+    <h1>Selamat Datang di Website SMK Bina Informatika</h1>
+  </header>
+
+  <section id="about" tabindex="0">
+    <h2>Tentang Kami</h2>
+    <p>
+      SMK Bina Informatika adalah sebuah sekolah menengah kejuruan yang berfokus pada bidang teknologi informasi, yang berlokasi di Kota Bogor. sekolah ini menawarkan berbagai program keahlian seperti Rekayasa Perangkat Lunak, Teknik Komputer dan Jaringan, Multimedia, Otomatisasi Tata Kelola Perkantoran, Perbankan dan Keuangan Makro.SMK Bina Informatika bertujuan untuk menghasilkan lulusan yang kompeten dan siap kerja di industri terkait. 
+    </p>
+  </section>
+
+  <section id="programs" tabindex="0">
+    <h2>Program dan Jurusan</h2>
+    <h3>Rekayasa Perangkat Lunak</h3>
+    <p class="subject-desc">Jurusan RPL menekankan pada pembelajaran programming, pengembangan aplikasi, analisa sistem, dan manajemen proyek perangkat lunak.</p>
+    <ul class="subject-list">
+      <li>Bahasa Pemrograman (Python, Java, dll.)</li>
+      <li>Pengembangan Web dan Mobile</li>
+      <li>Analisa dan Perancangan Sistem</li>
+      <li>Manajemen Proyek Perangkat Lunak</li>
+    </ul>
+  </section>
+ <img src="rpl.jpg" alt="RPL" style="height:auto; margin: 20px 0; display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 25%;" />
+
+  <section id="programs" tabindex="0">
+    <h3>Teknik Komputer dan Jaringan</h3>
+    <p class="subject-desc">Jurusan TKJ mempersiapkan siswa menjadi ahli dalam instalasi, perawatan, dan pengelolaan jaringan komputer serta sistem perangkat keras.</p>
+    <ul class="subject-list">
+      <li>Dasar Jaringan Komputer</li>
+      <li>Konfigurasi Router dan Switch</li>
+      <li>Instalasi Sistem Operasi Server</li>
+      <li>Keamanan Jaringan</li>
+    </ul>
+  </section>
+  <img src="tkj.jpg" alt="TKJ" style="height:auto; margin: 20px 0; display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 25%;" />
+
+  <section id="programs" tabindex="0">
+    <h3>Multimedia</h3>
+    <p class="subject-desc">Di jurusan Multimedia, Siswa akan belajar berbagai keterampilan penting di dunia digital kreatif, termasuk desain grafis, video editing, animasi, dan produksi media digital.</p>
+    <ul class="subject-list">
+      <li>Desain Grafis</li>
+      <li>Video Editing</li>
+      <li>Animasi 2D dan 3D</li>
+      <li>Produksi Media Digital</li>
+    </ul>
+  </section>
+
+  <section id="programs" tabindex="0">
+    <h3>Otomatisasi Tata Kelola Perkantoran</h3>
+    <p class="subject-desc">Jurusan OTKP membekali siswa dengan keterampilan tata kelola administrasi, manajemen kantor, dan penggunaan perangkat lunak perkantoran modern.</p>
+    <ul class="subject-list">
+      <li>Administrasi Perkantoran</li>
+      <li>Pengelolaan Dokumen Digital</li>
+      <li>Software Perkantoran (Microsoft Office, dll.)</li>
+      <li>Komunikasi Bisnis & Pelayanan Pelanggan</li>
+    </ul>
+  </section>
+  <img src="otkp.jpg" alt="OTKP" style="height:auto; margin: 20px 0; display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 25%;" />
+
+  <section id="programs" tabindex="0">
+    <h3>Perbankan dan Keuangan Makro</h3>
+    <p class="subject-desc">Jurusan Perbankan dan Keuangan makro membekali siswa dengan pemahaman mendalam tentang operasional lembaga keuangan, analisis kebijakan moneter, serta dinamika perekonomian secara luas.</p>
+    <ul class="subject-list">
+      <li>Prinsip prinsip Perbankan</li>
+      <li>Manajemen resiko keuangan</li>
+      <li>Investasi</li>
+      <li>Pasar modal</li>
+    </ul>
+  </section>
+
+
+  <section id="admission" tabindex="0">
+    <h2>Pendaftaran</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+    </p>
+  </section>
+
+  <section id="contact" tabindex="0">
+    <h2>Kontak Kami</h2>
+    <p>
+      Alamat: Jl.RE.Abdullah No.15,RT.02/RW.01,Pasir Jaya,Bogor Barat<br />
+      WhatsApp: <a href="https://wa.me/6289617354862" target="_blank">+62 896-1735-4862</a><br />
+      Email: smkbinainformatikabogor@gmail.com<br />
+      Instagram: @smkbinainformatika<br />
+    </p>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3879039347007!2d106.77669307399401!3d-6.598619893395184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5a582fd19a1%3A0xc9625c2e1b855a16!2sJl.%20Re.%20Abdullah%2C%20Kec.%20Bogor%20Bar.%2C%20Kota%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1746512276226!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <footer role="contentinfo">
+    &copy; 2025 Arbi XI RPL. All Rights Reserved.
+  </footer>
+</body>
+</html>
+
