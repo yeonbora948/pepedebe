@@ -1,278 +1,482 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PPDB SMK Bina Informatika</title>
-  <style>
-    /* Reset and base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-  scroll-behavior: smooth;
-}
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background: #f4f6f8;
-      color: #333;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PPDB SMK Bina Informatika</title>
+    <style>
+        /* Reset and base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Running text container */
-    .running-text-container {
-      background-color: #00529b;
-      color: white;
-      overflow: hidden;
-      white-space: nowrap;
-      box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .running-text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: marquee 15s linear infinite;
-      font-weight: 600;
-      font-size: 1rem;
-      line-height: 40px;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #f4f6f8;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-    @keyframes marquee {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
+        /* Running text container */
+        .running-text-container {
+            background-color: #00529b;
+            color: white;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
 
-    /* Navbar styles */
-    nav {
-      background-color: #007acc;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+        .running-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 40px;
+        }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
 
-    nav ul li {
-      margin: 0 15px;
-    }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 15px 10px;
-      display: block;
-      font-weight: 600;
-      transition: background-color 0.3s, color 0.3s;
-    }
+        /* Navbar styles */
+        nav {
+            background-color: #007acc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    nav ul li a:hover,
-    nav ul li a:focus {
-      background-color: #005a9e;
-      border-radius: 4px;
-      color: #fff;
-      outline: none;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    /* Main content */
-    .hero {
-      background: url('bifor.jpg');
-      height: 350px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
-      text-align: center;
-      padding: 0 20px;
-    }
+        nav ul li {
+            margin: 0 15px;
+        }
 
-    .hero h1 {
-      font-size: 2.5rem;
-      max-width: 700px;
-      font-weight: 700;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 10px;
+            display: block;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-    /* Section styles */
-    section {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #005a9e;
+            border-radius: 4px;
+            color: #fff;
+            outline: none;
+        }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: #007acc;
-    }
+        /* Main content */
+        .hero {
+            background: url('bifor.jpg') no-repeat center/cover;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 0 20px;
+        }
 
-    p {
-      font-size: 1.1rem;
-      color: #555;
-      line-height: 1.7;
-    }
+        .hero h1 {
+            font-size: 2.5rem;
+            max-width: 700px;
+            font-weight: 700;
+        }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px 10px;
-      background-color: #007acc;
-      color: white;
-      margin-top: auto;
-      font-size: 0.9rem;
-    }
+        /* Section styles */
+        section {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
+        /* Formulir Pendaftaran Styles */
+        form {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
 
-      nav ul li {
-        margin: 8px 0;
-      }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
 
-      .hero {
-        height: 250px;
-      }
+        legend {
+            font-size: 1.2rem;
+            color: #007acc;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
 
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #007acc;
+            outline: none;
+            background-color: #fff;
+        }
+
+        button[type="submit"] {
+            background-color: #007acc;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #005a9e;
+        }
+
+        #outputStruk {
+            border-left: 5px solid #007acc;
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 8px rgba(0, 122, 204, 0.2);
+        }
+
+        #outputStruk h3 {
+            color: #007acc;
+            margin-bottom: 10px;
+        }
+
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #007acc;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+            background-color: #007acc;
+            color: white;
+            margin-top: auto;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 8px 0;
+            }
+
+            .hero {
+                height: 250px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="running-text-container" aria-label="Informasi penting bergulir">
-    <div class="running-text" role="marquee" aria-live="polite" aria-atomic="true">
-      Penerimaan Siswa Baru Tahun Ajaran 2025/2026 - Daftar Sekarang untuk Masa Depan Cemerlang!
+    <div class="running-text-container" aria-label="Informasi penting bergulir">
+        <div class="running-text" role="marquee" aria-live="polite" aria-atomic="true">
+            Penerimaan Siswa Baru Tahun Ajaran 2025/2026 - Daftar Sekarang untuk Masa Depan Cemerlang!
+        </div>
     </div>
-  </div>
 
-  <nav role="navigation" aria-label="Menu utama">
-    <ul>
-      <li><a href="#home" tabindex="0">Beranda</a></li>
-      <li><a href="#about" tabindex="0">Tentang</a></li>
-      <li><a href="#programs" tabindex="0">Program</a></li>
-      <li><a href="#admission" tabindex="0">Pendaftaran</a></li>
-      <li><a href="#contact" tabindex="0">Kontak</a></li>
-    </ul>
-  </nav>
+    <nav role="navigation" aria-label="Menu utama">
+        <ul>
+            <li><a href="#home" tabindex="0">Beranda</a></li>
+            <li><a href="#about" tabindex="0">Tentang</a></li>
+            <li><a href="#programs" tabindex="0">Program</a></li>
+            <li><a href="#admission" tabindex="0">Pendaftaran</a></li>
+            <li><a href="#contact" tabindex="0">Kontak</a></li>
+        </ul>
+    </nav>
 
-  <header class="hero" id="home" role="banner">
-    <h1>Selamat Datang di Website SMK Bina Informatika</h1>
-  </header>
+    <header class="hero" id="home" role="banner">
+        <h1>Selamat Datang di Website SMK Bina Informatika</h1>
+    </header>
 
-  <section id="about" tabindex="0">
-    <h2>Tentang Kami</h2>
-    <p>
-      SMK Bina Informatika adalah sebuah sekolah menengah kejuruan yang berfokus pada bidang teknologi informasi, yang berlokasi di Kota Bogor. sekolah ini menawarkan berbagai program keahlian seperti Rekayasa Perangkat Lunak, Teknik Komputer dan Jaringan, Multimedia, Otomatisasi Tata Kelola Perkantoran, Perbankan dan Keuangan Makro.SMK Bina Informatika bertujuan untuk menghasilkan lulusan yang kompeten dan siap kerja di industri terkait. 
-    </p>
-  </section>
+    <section id="about" tabindex="0">
+        <h2>Tentang Kami</h2>
+        <p>
+            SMK Bina Informatika adalah sebuah sekolah menengah kejuruan yang berfokus pada bidang teknologi informasi,
+            yang berlokasi di Kota Bogor. sekolah ini menawarkan berbagai program keahlian seperti Rekayasa Perangkat
+            Lunak, Teknik Komputer dan Jaringan, Multimedia, Otomatisasi Tata Kelola Perkantoran, Perbankan dan Keuangan
+            Makro.SMK Bina Informatika bertujuan untuk menghasilkan lulusan yang kompeten dan siap kerja di industri
+            terkait.
+        </p>
+    </section>
 
-  <section id="programs" tabindex="0">
-    <h2>Program dan Jurusan</h2>
-    <h3>Rekayasa Perangkat Lunak</h3>
-    <p class="subject-desc">Jurusan RPL menekankan pada pembelajaran programming, pengembangan aplikasi, analisa sistem, dan manajemen proyek perangkat lunak.</p>
-    <ul class="subject-list">
-      <li>Bahasa Pemrograman (Python, Java, dll.)</li>
-      <li>Pengembangan Web dan Mobile</li>
-      <li>Analisa dan Perancangan Sistem</li>
-      <li>Manajemen Proyek Perangkat Lunak</li>
-    </ul>
-  </section>
- <img src="rpl.jpg" alt="RPL" style="height:auto; margin: 20px 0; display: block;
+    <section id="programs" tabindex="0">
+        <h2>Program dan Jurusan</h2>
+        <h3>Rekayasa Perangkat Lunak</h3>
+        <p class="subject-desc">Jurusan RPL menekankan pada pembelajaran programming, pengembangan aplikasi, analisa
+            sistem, dan manajemen proyek perangkat lunak.</p>
+        <ul class="subject-list">
+            <li>Bahasa Pemrograman (Python, Java, dll.)</li>
+            <li>Pengembangan Web dan Mobile</li>
+            <li>Analisa dan Perancangan Sistem</li>
+            <li>Manajemen Proyek Perangkat Lunak</li>
+        </ul>
+    </section>
+    <img src="rpl.jpg" alt="RPL" style="height:auto; margin: 20px 0; display: block;
  margin-left: auto;
  margin-right: auto;
  width: 25%;" />
 
-  <section id="programs" tabindex="0">
-    <h3>Teknik Komputer dan Jaringan</h3>
-    <p class="subject-desc">Jurusan TKJ mempersiapkan siswa menjadi ahli dalam instalasi, perawatan, dan pengelolaan jaringan komputer serta sistem perangkat keras.</p>
-    <ul class="subject-list">
-      <li>Dasar Jaringan Komputer</li>
-      <li>Konfigurasi Router dan Switch</li>
-      <li>Instalasi Sistem Operasi Server</li>
-      <li>Keamanan Jaringan</li>
-    </ul>
-  </section>
-  <img src="tkj.jpg" alt="TKJ" style="height:auto; margin: 20px 0; display: block;
+    <section id="programs" tabindex="0">
+        <h3>Teknik Komputer dan Jaringan</h3>
+        <p class="subject-desc">Jurusan TKJ mempersiapkan siswa menjadi ahli dalam instalasi, perawatan, dan pengelolaan
+            jaringan komputer serta sistem perangkat keras.</p>
+        <ul class="subject-list">
+            <li>Dasar Jaringan Komputer</li>
+            <li>Konfigurasi Router dan Switch</li>
+            <li>Instalasi Sistem Operasi Server</li>
+            <li>Keamanan Jaringan</li>
+        </ul>
+    </section>
+    <img src="tkj.jpg" alt="TKJ" style="height:auto; margin: 20px 0; display: block;
  margin-left: auto;
  margin-right: auto;
  width: 25%;" />
 
-  <section id="programs" tabindex="0">
-    <h3>Multimedia</h3>
-    <p class="subject-desc">Di jurusan Multimedia, Siswa akan belajar berbagai keterampilan penting di dunia digital kreatif, termasuk desain grafis, video editing, animasi, dan produksi media digital.</p>
-    <ul class="subject-list">
-      <li>Desain Grafis</li>
-      <li>Video Editing</li>
-      <li>Animasi 2D dan 3D</li>
-      <li>Produksi Media Digital</li>
-    </ul>
-  </section>
+    <section id="programs" tabindex="0">
+        <h3>Multimedia</h3>
+        <p class="subject-desc">Di jurusan Multimedia, Siswa akan belajar berbagai keterampilan penting di dunia digital
+            kreatif, termasuk desain grafis, video editing, animasi, dan produksi media digital.</p>
+        <ul class="subject-list">
+            <li>Desain Grafis</li>
+            <li>Video Editing</li>
+            <li>Animasi 2D dan 3D</li>
+            <li>Produksi Media Digital</li>
+        </ul>
+    </section>
 
-  <section id="programs" tabindex="0">
-    <h3>Otomatisasi Tata Kelola Perkantoran</h3>
-    <p class="subject-desc">Jurusan OTKP membekali siswa dengan keterampilan tata kelola administrasi, manajemen kantor, dan penggunaan perangkat lunak perkantoran modern.</p>
-    <ul class="subject-list">
-      <li>Administrasi Perkantoran</li>
-      <li>Pengelolaan Dokumen Digital</li>
-      <li>Software Perkantoran (Microsoft Office, dll.)</li>
-      <li>Komunikasi Bisnis & Pelayanan Pelanggan</li>
-    </ul>
-  </section>
-  <img src="otkp.jpg" alt="OTKP" style="height:auto; margin: 20px 0; display: block;
+    <section id="programs" tabindex="0">
+        <h3>Otomatisasi Tata Kelola Perkantoran</h3>
+        <p class="subject-desc">Jurusan OTKP membekali siswa dengan keterampilan tata kelola administrasi, manajemen
+            kantor, dan penggunaan perangkat lunak perkantoran modern.</p>
+        <ul class="subject-list">
+            <li>Administrasi Perkantoran</li>
+            <li>Pengelolaan Dokumen Digital</li>
+            <li>Software Perkantoran (Microsoft Office, dll.)</li>
+            <li>Komunikasi Bisnis & Pelayanan Pelanggan</li>
+        </ul>
+    </section>
+    <img src="otkp.jpg" alt="OTKP" style="height:auto; margin: 20px 0; display: block;
  margin-left: auto;
  margin-right: auto;
  width: 25%;" />
 
-  <section id="programs" tabindex="0">
-    <h3>Perbankan dan Keuangan Makro</h3>
-    <p class="subject-desc">Jurusan Perbankan dan Keuangan makro membekali siswa dengan pemahaman mendalam tentang operasional lembaga keuangan, analisis kebijakan moneter, serta dinamika perekonomian secara luas.</p>
-    <ul class="subject-list">
-      <li>Prinsip prinsip Perbankan</li>
-      <li>Manajemen resiko keuangan</li>
-      <li>Investasi</li>
-      <li>Pasar modal</li>
-    </ul>
-  </section>
+    <section id="programs" tabindex="0">
+        <h3>Perbankan dan Keuangan Makro</h3>
+        <p class="subject-desc">Jurusan Perbankan dan Keuangan makro membekali siswa dengan pemahaman mendalam tentang
+            operasional lembaga keuangan, analisis kebijakan moneter, serta dinamika perekonomian secara luas.</p>
+        <ul class="subject-list">
+            <li>Prinsip prinsip Perbankan</li>
+            <li>Manajemen resiko keuangan</li>
+            <li>Investasi</li>
+            <li>Pasar modal</li>
+        </ul>
+    </section>
 
 
-  <section id="admission" tabindex="0">
-    <h2>Pendaftaran</h2>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-    </p>
-  </section>
+    <section id="admission" tabindex="0">
+        <h2>Pendaftaran Siswa Baru</h2>
+        <form id="ppdbForm">
+            <fieldset>
+                <legend><strong>Data Siswa</strong></legend>
+                <label for="namaSiswa">Nama Lengkap:</label><br>
+                <input type="text" id="namaSiswa" name="namaSiswa" required><br><br>
 
-  <section id="contact" tabindex="0">
-    <h2>Kontak Kami</h2>
-    <p>
-      Alamat: Jl.RE.Abdullah No.15,RT.02/RW.01,Pasir Jaya,Bogor Barat<br />
-      WhatsApp: <a href="https://wa.me/6289617354862" target="_blank">+62 896-1735-4862</a><br />
-      Email: smkbinainformatikabogor@gmail.com<br />
-      Instagram: @smkbinainformatika<br />
-    </p>
+                <label for="ttl">Tempat, Tanggal Lahir:</label><br>
+                <input type="text" id="ttl" name="ttl" required><br><br>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3879039347007!2d106.77669307399401!3d-6.598619893395184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5a582fd19a1%3A0xc9625c2e1b855a16!2sJl.%20Re.%20Abdullah%2C%20Kec.%20Bogor%20Bar.%2C%20Kota%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1746512276226!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
+                <label for="alamat">Alamat:</label><br>
+                <textarea id="alamat" name="alamat" rows="3" required></textarea><br><br>
 
-  <footer role="contentinfo">
-    &copy; 2025 Arbi XI RPL. All Rights Reserved.
-  </footer>
+                <label for="jurusan">Jurusan Pilihan:</label><br>
+                <select id="jurusan" name="jurusan" required>
+                    <option value="">-- Pilih Jurusan --</option>
+                    <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                    <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+                    <option value="Multimedia">Multimedia</option>
+                    <option value="Otomatisasi Tata Kelola Perkantoran">Otomatisasi Tata Kelola Perkantoran</option>
+                    <option value="Perbankan dan Keuangan Makro">Perbankan dan Keuangan Makro</option>
+                </select><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Data Orang Tua</strong></legend>
+                <label for="namaOrtu">Nama Orang Tua/Wali:</label><br>
+                <input type="text" id="namaOrtu" name="namaOrtu" required><br><br>
+
+                <label for="telepon">No. Telepon:</label><br>
+                <input type="tel" id="telepon" name="telepon" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+            </fieldset>
+
+            <button type="submit">Kirim Pendaftaran</button>
+        </form>
+
+        <div id="outputStruk"
+            style="margin-top:30px; display:none; padding:15px; border:1px solid #007acc; background-color:#e6f7ff;">
+            <h3>Struk Pendaftaran</h3>
+            <p><strong>Nama Siswa:</strong> <span id="outNamaSiswa"></span></p>
+            <p><strong>Tempat, Tanggal Lahir:</strong> <span id="outTTL"></span></p>
+            <p><strong>Alamat:</strong> <span id="outAlamat"></span></p>
+            <p><strong>Jurusan Pilihan:</strong> <span id="outJurusan"></span></p>
+            <hr>
+            <p><strong>Nama Orang Tua:</strong> <span id="outNamaOrtu"></span></p>
+            <p><strong>No. Telepon:</strong> <span id="outTelepon"></span></p>
+            <p><strong>Email:</strong> <span id="outEmail"></span></p>
+            <a id="waLink" href="#" target="_blank" style="
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+">Kirim ke WhatsApp</a>
+
+        </div>
+    </section>
+
+
+    <section id="contact" tabindex="0">
+        <h2>Kontak Kami</h2>
+        <p>
+            Alamat: Jl.RE.Abdullah No.15,RT.02/RW.01,Pasir Jaya,Bogor Barat<br />
+            WhatsApp: <a href="https://wa.me/6289617354862" target="_blank">+62 896-1735-4862</a><br />
+            Email: <a href="mailto:smkbifor@gmail.com">smkbifor@gmail.com</a><br />
+            Instagram: <a href="https://instagram.com/smkbinainformatika">@smkbinainformatika</a><br />
+        </p>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3879039347007!2d106.77669307399401!3d-6.598619893395184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5a582fd19a1%3A0xc9625c2e1b855a16!2sJl.%20Re.%20Abdullah%2C%20Kec.%20Bogor%20Bar.%2C%20Kota%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1746512276226!5m2!1sid!2sid"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer role="contentinfo">
+        &copy; 2025 Arbi XI RPL. All Rights Reserved.
+    </footer>
+   <script>
+  document.getElementById("ppdbForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Ambil data
+    const nama = document.getElementById("namaSiswa").value;
+    const ttl = document.getElementById("ttl").value;
+    const alamat = document.getElementById("alamat").value;
+    const jurusan = document.getElementById("jurusan").value;
+    const ortu = document.getElementById("namaOrtu").value;
+    const telepon = document.getElementById("telepon").value;
+    const email = document.getElementById("email").value;
+
+    // Tampilkan struk
+    document.getElementById("outNamaSiswa").innerText = nama;
+    document.getElementById("outTTL").innerText = ttl;
+    document.getElementById("outAlamat").innerText = alamat;
+    document.getElementById("outJurusan").innerText = jurusan;
+    document.getElementById("outNamaOrtu").innerText = ortu;
+    document.getElementById("outTelepon").innerText = telepon;
+    document.getElementById("outEmail").innerText = email;
+    document.getElementById("outputStruk").style.display = "block";
+
+    // Buat teks WhatsApp
+    const pesan =
+      `Pendaftaran Siswa Baru:%0A` +
+      `Nama: ${nama}%0A` +
+      `TTL: ${ttl}%0A` +
+      `Alamat: ${alamat}%0A` +
+      `Jurusan Pilihan: ${jurusan}%0A%0A` +
+      `Orang Tua/Wali: ${ortu}%0A` +
+      `Telepon: ${telepon}%0A` +
+      `Email: ${email}`;
+
+    // Ganti nomor WA berikut dengan nomor admin sekolah
+    const nomorWA = "6289617354862"; // format tanpa +
+    const linkWA = `https://wa.me/${nomorWA}?text=${pesan}`;
+    document.getElementById("waLink").href = linkWA;
+
+    // Scroll ke struk
+    window.scrollTo({
+      top: document.getElementById("outputStruk").offsetTop - 20,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+
 </body>
-</html>
 
+</html>
